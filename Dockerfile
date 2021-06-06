@@ -15,23 +15,8 @@ RUN apt-get install -y\
     g++ \
     git \
     util-linux \
-    libevent-dev \
-    libjpeg-dev \
-    libffi-dev \
-    libpq-dev \
-    libwebp-dev \
-    libxml2 \
-    libxml2-dev \
-    libxslt-dev \
-    musl \
     neofetch \
     xfce4 \
     xfce4-terminal
 
 RUN apt-get autoremove --purge
-
-RUN wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
-
-RUN sudo dpkg -i chrome*
-
-RUN sudo apt-get install -f
