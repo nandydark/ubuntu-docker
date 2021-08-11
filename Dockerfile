@@ -7,8 +7,10 @@ RUN apt-get update && apt upgrade -y && apt-get install sudo -y
 RUN apt-get install -y\
     coreutils \
     bash \
+    build-essential \
     nodejs \
     bzip2 \
+    cargo \
     curl \
     figlet \
     gcc \
@@ -36,6 +38,8 @@ RUN apt-get install -y\
     python3-dev \
     python3-pip \
     libreadline-dev \
+    libssl-dev \
+    libffi-dev \
     zipalign \
     sqlite3 \
     ffmpeg \
@@ -50,8 +54,5 @@ RUN apt-get install -y\
     policykit-1 \
     p7zip-full \
     tree
-
-RUN apt-get install build-essential libssl-dev libffi-dev \
-    python3-dev cargo
 
 RUN apt-get autoremove --purge
